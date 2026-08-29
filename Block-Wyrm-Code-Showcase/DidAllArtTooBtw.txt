@@ -1,1 +1,1 @@
-Spent half of my time in Block Wyrm learning image editing softwares and cutting up Enemy/Player/UI sprites and animating them.
+Spent half of my time in Block Wyrm learning image editing softwares and cutting up Enemy/Player/UI sprites and animating them in unity
