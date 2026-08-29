@@ -1,0 +1,34 @@
+Weapon Modification & Energy Core System
+
+This system lets the player modify weapons by equipping Energy Cores into weapon-specific slots.
+
+The game currently supports Rifle, Shotgun, and Launcher weapons, each with four core slots. Every weapon has base stats such as damage, fire rate, projectile count, projectile speed, spread, and explosion radius. These base values are stored in the weapon database.
+
+Energy Cores can modify these stats using additive or multiplicative bonuses. Each core has its own name, icon, rarity, compatible weapon type, and stat modifiers. The system calculates the weapon's final runtime stats by combining its base values with the cores currently equipped.
+Players can select, drag, equip, remove, and swap cores between their inventory and weapon slots. Weapon slots only accept compatible cores, while unlocked bag slots can hold unused cores.
+Some inventory slots can be locked and purchased with gems. Their unlocked state is saved and restored between sessions.
+The weapon modification UI allows the player to switch between weapons and immediately see how equipped cores affect the weapon's final statistics.
+
+Core positions and weapon loadouts are saved to disk and recreated when the scene or game is loaded. The system also keeps a runtime record of equipped cores across scene changes.
+Cores can also be purchased through a shop. The system checks inventory space and player currency before spawning the purchased core into an available bag slot. Cores can also be granted directly as rewards without requiring a purchase.
+
+Individual Scripts
+
+WeaponDatabase — Stores weapon base stats.
+EnergyCoreSO — Defines Energy Core data and modifiers.
+EnergyCoreStatCalculator — Calculates final modified weapon stats.
+DraggableCore — Handles core selection and dragging.
+CoreSlot — Handles inventory/weapon slots, drops, swaps, and compatibility.
+CoreSlotUnlockPanel — Handles unlocking bag slots with gems.
+BagSlotUnlockSaveInitializer — Restores saved bag-slot unlock states.
+WeaponViewManager — Controls weapon selection and the stat display.
+UIWeaponLoadoutRuntime — Tracks currently equipped cores during runtime.
+UIManager — Displays selected core information and prices.
+UICoreLoadoutDiskPersistence — Saves and loads core positions.
+UICorePrefabDatabase — Finds prefabs from saved core IDs.
+UICoreLoadoutSceneLoader — Loads saved inventories when the scene starts.
+UICorePrefabRegistry — Finds the prefab belonging to a core type.
+UICoreShopPurchaseService — Handles core purchases.
+UICoreShopPurchaseButton — Connects the purchase button to the shop system.
+CoreShopPurchaseResult — Defines possible purchase results/failures.
+UICoreGrantService — Gives cores to the player as rewards or other non-shop sources.

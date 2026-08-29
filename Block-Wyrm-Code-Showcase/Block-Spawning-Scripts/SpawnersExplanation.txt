@@ -1,0 +1,18 @@
+Blocks are physics objects, with VerticalVelocitySetter attached to them.
+They go down at a certain speed and when colliding with an another object on "ground" layer they stop and freeze themselves, script also get deactivated after a collision to save on performance.
+
+OrderedSpawners, spawn predetermined objects in predetermined spots in predetermined rotations, with predetermined time between each spawn thats affected by a central time multiplier to easily change spawn speed. Blocks after spawning go down thanks to VerticalVelocitySetter. While block sets for ordered spawner must be set manually this manual setting lets me be a little creative and gives more design choices while setting them up, and when you mix 15-20 block spawn sets it feels random enough. Blocks are taken from a shared pool instead of being individually created, for performance.
+
+SequentialSpawner, Spawns OrderedSpawners, what lets me mix different spawner sets. Spawns a OrderedSpawner, waits until that spawner completes its set then deletes it and creates a new ordered spawner.
+
+
+
+
+
+
+
+
+
+
+
+

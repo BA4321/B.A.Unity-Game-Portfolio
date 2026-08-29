@@ -1,0 +1,12 @@
+I during development i was faced with a problem which was basically this;
+Player has a one big collider used for walking and one smaller collider inside the big collider to function as a playercore that instantly killed the player when player was crushed, sometimes despite being inside a block the insta kill core wouldn't work and player would get stuck. 
+
+To fix this i thought a lot about the problem and tested few things,
+First i put the instakill collider at players head and this resulted in a very hard and unforgiving experience, even with save mechanic player would constantly get teleported up.
+
+Second i made the walking collider small and put the instakill collider on top of the smaller walking collider, so that player now has a better more forgiving grace period. There were two problems, player could walk into 1 block gaps and jumping and hitting a falling block meant death. 
+Unfortunately simple solution of making it so instakill only works when player is grounded didn't work reliably and could still end with player stuck inside blocks.
+For that i made a new collider that gets activated when player is not grounded that covers the instakill collider to stop "bonk head while jumping = instant death"
+And to make the player not be able to walk into 1 block gaps, i simply made walking collider slightly larger than 1 block.
+
+

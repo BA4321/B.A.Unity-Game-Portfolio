@@ -1,0 +1,29 @@
+I needed a very customizable camera follow that;
+Doesn't shake with micro movements,
+When player goes up, goes after player with a normal speed,
+When player goes down a little, goes after player with high speed,
+When pplayer goes down a lot(aka falling off the map), it goes after player very slowly, 
+This slowness is there because outofbounds player killer box is attached to camera and if camera follows player's fall player will never reach the outofboundsplayerkiller. 
+
+This player killer follows player via following camera because at certain heights when player fell down it may take a long while for player to reach ground, and making a script thats used to make killer seperately chase after player seemed needlessly complex for little reward, so i instead focused on camera following to get this custom killzone positioning and make camera more responsive.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

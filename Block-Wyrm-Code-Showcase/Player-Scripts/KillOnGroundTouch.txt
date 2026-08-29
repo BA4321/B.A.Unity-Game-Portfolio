@@ -1,0 +1,18 @@
+This script is the script that kills and teleports player when player gets crushed under a falling block. When player is crushed for the first few times player is teleported to one of the many possible locations that doesn't have any blocks near it, This rescue can also be triggered via a button in UI manually when player is stuck. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
