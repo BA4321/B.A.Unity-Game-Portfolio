@@ -5,3 +5,5 @@ You can also play the demo for Block Wyrm on itch io, here is the itch io demo l
 
 Stick Legions is a auto battler im working on, 
 Right now System Map is here to give a idea onto what this game is and its general complexity and its documentation quality throught its development. I plan on sharing some of the codes after closing gameplay loop.
+Stick Legions Youtube Channel:
+https://www.youtube.com/@StickLegionsGame
